@@ -1,17 +1,17 @@
 Raw data
 1======unzip
 unzip -x (file.zip)
-e.g. unzip -x JiaKe_230922_JiaK_WMPFC_20230921.zip
+e.g. unzip -x WMPFC_20230921.zip
 
 2======cd Raw data/file
-dcm2niix -o ~/2022_WMPFC/JiaKe_20230915_JiaK_WMPFC_sub007_1/ -f T1.nii ./7_MP2RAGE_tra_UNI-DEN/
+dcm2niix -o ~/2022_WMPFC/WMPFC_sub007_1/ -f T1.nii ./7_MP2RAGE_tra_UNI-DEN/
 
 -------------------------------------------------------
 -o ~/ (output file) -f T1.nii ./7_MP2RAGE_tra_UNI-DEN/
 *****find DEN and write DEN(number!!!!!)
 
 3======DICOM 2 nii
-for n in {1..8};do dcm2niix -o ~/2022_WMPFC/JiaKe_20230921_JiaK_WMPFC_sub008_1/ -f run${n} "./1$[n-1]_cmrr_mbep2d1_bold_p8iso_20230525_final_Run${n}";done
+for n in {1..8};do dcm2niix -o ~/2022_WMPFC/WMPFC_sub008_1/ -f run${n} "./1$[n-1]_cmrr_mbep2d1_bold_p8iso_20230525_final_Run${n}";done
 
 ----------
 8 runs
