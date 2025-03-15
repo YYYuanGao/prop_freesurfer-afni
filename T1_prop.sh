@@ -8,3 +8,10 @@ recon-all -all -s OUTPUT.nii -hires -i s.nii -expert expert.opt
 
 freeview -v OUTPUT.nii/mri/T1.mgz
 
+=================
+
+mri_label2vol --seg ribbon.mgz --temp rawavg.mgz --o ribbon-in-rawavd.mgz --regheader  ribbon.mgz
+
+mri_convert ribbon-in-rawavd.mgz ribbon-in-rawavd.nii
+
+mri_convert rawavg.mgz rawavg.nii
